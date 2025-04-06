@@ -24,7 +24,7 @@ public class ControllerBeforeAspect {
     // Run before all controller methods
     @Before("allControllerMethods()")
     public void logBeforeExecution(JoinPoint joinPoint) {
-        log.info("Entering: {} with arguments = {}",
+        log.debug("Entering: {} with arguments = {}",
                 joinPoint.getSignature().toShortString(),
                 Arrays.toString(joinPoint.getArgs()));
     }
